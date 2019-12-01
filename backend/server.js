@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import connectToDb from './db/connect';
 import passport from 'passport';
+import hobbies from './routes/hobbies.routes';
 import posts from './routes/posts.routes';
 import user from './routes/user.routes';
 import auth from './routes/auth.routes';
@@ -48,9 +49,10 @@ passport.use(new JWTStrategy({
 ));
 
 server.use('/api', posts);
+server.use('/h', hobbies);
 server.use('/auth', auth);
 server.use('/user', passport.authenticate('jwt', {session: false}), user);
-server.listen(3005, () => {
-    console.log('server started - 3005');
+server.listen(3000, () => {
+    console.log('server started - 3000');
 });
 
