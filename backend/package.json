@@ -32,6 +32,6 @@
     "passport-local-mongoose": "^4.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "sanitize-html": "^1.15.0"
+    "sanitize-html": "^2.3.2"
   }
 }
